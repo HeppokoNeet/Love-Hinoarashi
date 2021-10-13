@@ -1,7 +1,4 @@
 class TopController < ApplicationController
-    def index
-    end
-
-    def hoge
-    end
+  def index
+  end
 end
