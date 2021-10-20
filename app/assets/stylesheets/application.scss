@@ -19,3 +19,18 @@
 .register_font {
   font-size: 100px;
 }
+
+.notifications {
+  color: white;
+  font-size: 15px;
+
+  .notice {
+    background-color: lightBlue;
+    height: 30px;
+    text-align: center;
+  }
+  .error {
+    background-color: red;
+    height: 20px;
+  }
+}
