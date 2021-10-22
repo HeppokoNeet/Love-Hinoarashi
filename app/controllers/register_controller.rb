@@ -6,7 +6,13 @@ class RegisterController < ApplicationController
 
   def create
     @user = User.new_user(User.user_params(params))
-    unless @user.valid?
+    if @user.id.present?
+      error_text = 'すでにメールアドレスの登録があります、ログインしてください'
+      flash[:error] = error_text
+      render 'login/index', layout: 'noHeaderFooter.html.slim'
+      return
+    end
+    if !@user.valid?
       render 'register/index', layout: 'noHeaderFooter.html.slim'
       return
     end

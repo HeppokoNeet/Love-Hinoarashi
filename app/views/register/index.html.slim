@@ -12,22 +12,31 @@ br
     = f.text_field :name, :class => 'form-control'
     - if @user.errors.include?(:name)
       a style= "color: red;"
-        = "#{@user.errors.messages[:name]}"
+        = "#{@user.errors.messages[:name].first}"
   br
   div class="container"
     span class="badge badge-danger" 必須
     label for="ex3" &nbsp;<strong>メールアドレス</strong>
     = f.text_field :email, :class => 'form-control'
+    - if @user.errors.include?(:email)
+      a style= "color: red;"
+        = "#{@user.errors.messages[:email].from(0)}"
   br
   div class="container"
     span class="badge badge-danger" 必須
     label for="ex3" &nbsp;<strong>パスワード</strong>
     = f.text_field :password, :class => 'form-control', :type => "password"
+    - if @user.errors.include?(:password)
+      a style= "color: red;"
+        = "#{@user.errors.messages[:password].first}"
   br
   div class="container"
     span class="badge badge-danger" 必須
     label for="ex3" &nbsp;<strong>パスワード確認</strong>
     = f.text_field :password_confirmation, :class => 'form-control', :type => "password"
+    - if @user.errors.include?(:password_confirmation)
+      a style= "color: red;"
+        = "#{@user.errors.messages[:password_confirmation].from(0)}"
   br
   = submit_tag "登録する", :class => "center-block", :id => "submit"
   br
