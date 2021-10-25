@@ -6,7 +6,7 @@ class User < ApplicationRecord
             presence: true,
             format: {
               with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i,
-              message: 'メールアドレスの形式が正しくありません',
+              message: '「メールアドレスの形式」が正しくありません',
             }
   validates :password, presence: true
   validates :password_confirmation, presence: true

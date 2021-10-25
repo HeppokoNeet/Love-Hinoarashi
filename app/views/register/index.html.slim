@@ -4,8 +4,6 @@ nav class="navbar navbar-expand-md bg-warning"
     h2 <strong> 新規登録</strong>
 br
 = form_for(@user, url: register_index_path) do |f|
-  - if @user.errors.any?
-    li エラーがあります、修正してください
   div class="container"
     span class="badge badge-danger" 必須
     label for="ex3" &nbsp;<strong>名前</strong>
@@ -20,7 +18,9 @@ br
     = f.text_field :email, :class => 'form-control'
     - if @user.errors.include?(:email)
       a style= "color: red;"
-        = "#{@user.errors.messages[:email].from(0)}"
+        = "#{@user.errors.messages[:email].first}"
+        br
+        = "#{@user.errors.messages[:email].second}"
   br
   div class="container"
     span class="badge badge-danger" 必須
@@ -28,7 +28,7 @@ br
     = f.text_field :password, :class => 'form-control', :type => "password"
     - if @user.errors.include?(:password)
       a style= "color: red;"
-        = "#{@user.errors.messages[:password].first}"
+        = "#{@user.errors.messages[:password].second}"
   br
   div class="container"
     span class="badge badge-danger" 必須
@@ -36,7 +36,9 @@ br
     = f.text_field :password_confirmation, :class => 'form-control', :type => "password"
     - if @user.errors.include?(:password_confirmation)
       a style= "color: red;"
-        = "#{@user.errors.messages[:password_confirmation].from(0)}"
+        = "#{@user.errors.messages[:password_confirmation].first}"
+        br
+        = "#{@user.errors.messages[:password_confirmation].second}"
   br
   = submit_tag "登録する", :class => "center-block", :id => "submit"
   br
