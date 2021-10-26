@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'top#index'
   get '/login' => 'login#index'
+  post '/login' => 'login#create'
   resources :register
 end

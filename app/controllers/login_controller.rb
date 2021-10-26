@@ -1,5 +1,7 @@
 class LoginController < ApplicationController
-  def index
-    render layout: 'noHeaderFooter.html.slim'
+  def index; end
+
+  def create
+    binding.pry
   end
 end
