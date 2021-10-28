@@ -1,4 +1,4 @@
-- if flash[:notice].present?
+- if flash[:notice].present? || flash[:error].present?
     .notifications
       - flash.each do |key, value|
         = content_tag(:div, value, class: key)
@@ -8,10 +8,16 @@ nav class="navbar navbar-expand-md navbar-dark bg-warning"
           - if logged_in?
             li class="nav-item"
             a class="nav-link disabled" aria-current="page"
-              h2 = link_to "あああ", register_index_path, :class => "nav-link"
+              h2 = link_to "合掌ギャラリー", register_index_path, :class => "nav-link"
             li class="nav-item"
             a class="nav-link disabled" aria-current="page"
-              h2 = link_to "ああああ", login_path, :class => "nav-link"
+              h2 = link_to "理不尽クイズ", login_path, :class => "nav-link"
+            a class="nav-link disabled" aria-current="page"
+              h2 = link_to "チャリティー", login_path, :class => "nav-link"
+            a class="nav-link disabled" aria-current="page"
+              h2 = link_to "マイページ", login_path, :class => "nav-link"
+            a class="nav-link disabled" aria-current="page"
+              h2 = link_to "ログアウト", logout_path, :method => :post , :class => "nav-link"
           - else
             li class="nav-item"
             a class="nav-link disabled" aria-current="page"

@@ -1,5 +1,7 @@
 class LoginController < ApplicationController
-  def index; end
+  def index
+    render layout: 'noHeaderFooter.html.slim'
+  end
 
   def create
     user = User.find_by(email: params[:session][:email])
