@@ -1,4 +1,5 @@
 class RegisterController < ApplicationController
+  # before_action :logged_in_user, only:[:アクションたち]
   def index
     @user = User.new
     render layout: 'noHeaderFooter.html.slim'
