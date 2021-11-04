@@ -2,9 +2,22 @@
   "name": "hino",
   "private": true,
   "dependencies": {
-    "@prettier/plugin-ruby": "^2.0.0-rc3"
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@prettier/plugin-ruby": "^2.0.0-rc3",
+    "@rails/webpacker": "5.4.3",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react_ujs": "^2.6.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "webpack-dev-server": "^3"
   }
 }
