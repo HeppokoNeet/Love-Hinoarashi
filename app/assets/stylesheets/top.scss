@@ -2,9 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.center-block {
-  width: 300px;
-  display: block;
-  margin: auto;
-  background-color: rgb(180, 180, 243);
+.screen_wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: red;
 }
