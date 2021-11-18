@@ -2,34 +2,63 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html,
-body {
-  height: 100%;
+.wrapper_top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
 }
-#screen_wrapper {
-  width: 50%;
-  height: 100%;
-  margin: 0px 0px 0px 50%;
-}
-#screen_wrapper::before {
-  content: "";
-  width: 50%;
-  height: 100%;
-  background: url(images/back1.jpg) no-repeat center center;
-  background-size: cover;
+.wrapper_image {
+  display: flex;
   position: absolute;
-  top: 0px;
-  left: 0px;
-}
-#screen_wrapper h1 {
-  position: relative;
-  height: 100%;
-}
-#screen_wrapper h1 img {
-  position: absolute;
-  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.top_left {
+  display: flex;
+  width: 50%;
+  height: 100vh;
+}
+
+.button_left {
+  width: 50%;
+  height: 25vh;
+  left: 25%;
+  top: 40%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 2em;
+  color: #2285b1;
+  font-size: 30px;
+  font-weight: 70;
+  border: 3px solid #a0c4d3;
+  border-radius: 10px;
+}
+
+.top_right {
+  display: flex;
+  width: 50%;
+  height: 100vh;
+}
+
+.button_right {
+  width: 50%;
+  height: 25vh;
+  left: 25%;
+  top: 40%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 2em;
+  color: #2285b1;
+  font-size: 30px;
+  font-weight: 70;
+  border: 3px solid #a0c4d3;
+  border-radius: 10px;
 }

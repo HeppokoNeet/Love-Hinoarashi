@@ -46,6 +46,7 @@ gem 'slim-rails', '~> 3.1', '>= 3.1.3'
 gem 'prettier'
 gem 'react-rails'
 gem 'webpacker'
+gem "font-awesome-rails"
 
 
 group :development, :test do
