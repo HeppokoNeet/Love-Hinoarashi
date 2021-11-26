@@ -1,11 +1,23 @@
 div class="wrapper_top"
     div class="wrapper_image"
-        = image_tag("top/top_test.jpg", :style => "width: 100%; height: 100vh; max-width:100%; max-height:100%;")
+        = image_tag("top/hinoarashi_up.jpg", :style => "width: 100%; height: 100vh; max-width:100%; max-height:100%;")
+    div id="scroll" class="top_center"
+        span
+        a href="#" Scroll
     div class="top_left"
-        div class="button_left"
-            a href="" 新規登録
-            i class="fa fa-pencil"
+        / div class="button_left"
+        /     a href="" 新規登録
+        /     i class="fa fa-pencil"
     div class="top_right"
-        div class="button_right"
-            a href="" ログイン
-            i class="fa fa-sign-in"
+        / div class="button_right"
+        /     a href="" ログイン
+        /     i class="fa fa-sign-in"
+div class="wrapper_top"
+        = image_tag("top/hinoarashi_down.jpg", :style => "width: 100%; height: 100vh; max-width:100%; max-height:100%;")
+
+javascript:
+    //iOSのスクロールを禁止にする
+    function disableScroll(event) {
+        event.preventDefault();
+    }
+    document.addEventListener('touchmove', disableScroll, { passive: false });
