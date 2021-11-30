@@ -1,19 +1,26 @@
 div class="wrapper_top"
     div class="wrapper_image"
         = image_tag("top/hinoarashi_up.jpg", :style => "width: 100%; height: 100vh; max-width:100%; max-height:100%;")
-    div id="scroll" class="top_center"
+    div id="scroll1" class="top_center"
         span
-        a href="#" Scroll
-    div class="top_left"
+        a href="#scroll2" Scroll
+div class="wrapper_top2"
+    div class="wrapper_image2"
+        = image_tag("top/hinoarashi_down.jpg", :style => "width: 100%; height: 100vh; max-width:100%; max-height:100%;")
+    div id="scroll2" class="top_center2"
+            span
+            a href="#scroll1" Scroll
+
+    /div class="top_left"
         / div class="button_left"
         /     a href="" 新規登録
         /     i class="fa fa-pencil"
-    div class="top_right"
+    /div class="top_right"
         / div class="button_right"
         /     a href="" ログイン
         /     i class="fa fa-sign-in"
-div class="wrapper_top"
-        = image_tag("top/hinoarashi_down.jpg", :style => "width: 100%; height: 100vh; max-width:100%; max-height:100%;")
+
+
 
 javascript:
     //iOSのスクロールを禁止にする
@@ -21,3 +28,22 @@ javascript:
         event.preventDefault();
     }
     document.addEventListener('touchmove', disableScroll, { passive: false });
+
+javascript:
+        window.addEventListener('DOMContentLoaded', () => {
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
+
+            anchorLinksArr.forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    const targetId = link.hash;
+                    const targetElement = document.querySelector(targetId);
+                    const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
+                    window.scrollTo({
+                        top: targetOffsetTop,
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
