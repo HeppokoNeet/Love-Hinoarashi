@@ -30,6 +30,11 @@ javascript:
     document.addEventListener('touchmove', disableScroll, { passive: false });
 
 javascript:
+    //ページジャンプでSafariとIEでスクロール対応するようにする
+    require('../../assets/javascripts/smoothscroll.js')
+
+javascript:
+        //ページジャンプでスクロールするようにする
         window.addEventListener('DOMContentLoaded', () => {
             const anchorLinks = document.querySelectorAll('a[href^="#"]');
             const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
