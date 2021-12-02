@@ -158,25 +158,34 @@ body {
 }
 
 .top_left {
-  display: flex;
   width: 50%;
   height: 100vh;
 }
 
-.button_left {
-  width: 50%;
-  height: 25vh;
-  left: 25%;
-  top: 40%;
-  position: relative;
+.font_left {
   display: flex;
+  top: 10%;
+  position: relative;
+  color: #2285b1;
+  font-size: 70px;
+  font-weight: 70;
+  font-family: "HiraKakuProN-W6", "Arial Black";
+  width: 50%;
+}
+
+.register_left {
+  display: flex;
+  top: 30%;
+  width: 50%;
+  margin-left: 25%;
+  position: relative;
   justify-content: space-around;
   align-items: center;
   padding: 1em 2em;
   color: #2285b1;
   font-size: 30px;
   font-weight: 70;
-  border: 3px solid #a0c4d3;
+  border: 1px solid #000000;
   border-radius: 10px;
 }
 
