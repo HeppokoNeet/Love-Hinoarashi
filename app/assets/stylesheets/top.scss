@@ -63,7 +63,7 @@ body {
   display: inline-block;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
-  color: rgb(0, 0, 0);
+  color: #fac720;
   font: normal 400 35px/1 "cursive", cursive;
   letter-spacing: 0.1em;
   text-decoration: none;
@@ -122,8 +122,9 @@ body {
   width: 24px;
   height: 24px;
   margin-left: -12px;
-  border-left: 1px solid rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: 1px solid #fac720;
+  opacity: 0.5;
+  border-bottom: 1px solid #fac720;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb2 1.5s infinite;
@@ -213,23 +214,55 @@ body {
 
 .top_right {
   display: flex;
-  width: 50%;
+  padding-left: 50%;
   height: 100vh;
 }
 
-.button_right {
-  width: 50%;
-  height: 25vh;
-  left: 25%;
-  top: 40%;
-  position: relative;
+.font_right {
   display: flex;
+  top: 10%;
+  position: relative;
+  color: #ff47b2;
+  font-size: 80px;
+  font-weight: 70;
+  font-family: "HiraKakuProN-W6", "Arial Black";
+  width: 50%;
+  left: 55%;
+}
+
+.login_right {
+  display: flex;
+  width: 45%;
+  height: 10%;
+  position: relative;
   justify-content: space-around;
   align-items: center;
-  padding: 1em 2em;
-  color: #2285b1;
-  font-size: 30px;
+  padding: 0.3em 0.3em;
+  font-size: 20px;
   font-weight: 70;
-  border: 3px solid #a0c4d3;
-  border-radius: 10px;
+  border: 1px solid #000000;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  top: 79%;
+  right: 25%;
+}
+
+.login_right a {
+  position: absolute;
+  padding-left: 37%;
+  padding-top: 6%;
+  height: 100%;
+  width: 100%;
+}
+
+.login_right a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+.login_right:hover {
+  cursor: pointer;
 }
