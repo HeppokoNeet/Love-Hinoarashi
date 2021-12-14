@@ -10,20 +10,65 @@
 }
 
 .register_image {
-  display: flex;
   width: 100%;
   height: 100vh;
 }
 
-.register_registerform {
+.register_font_area {
+  width: 100%;
+  height: 100vh;
   position: absolute;
-  width: 40%;
-  padding-left: 30%;
-  background-color: rgba(255, 255, 255, 0.8);
-  height: 90%;
+}
+
+.register_font {
+  display: flex;
+  position: relative;
+  color: #f54141;
+  font-size: 100px;
+  font-weight: 70;
+  font-family: "HiraKakuProN-W6", "Arial Black";
+  width: 50%;
+  padding-left: 20px;
+}
+
+.register_form_area {
+  position: absolute;
+  width: 39.5%;
+  height: 82%;
+  top: 10.5%;
+  left: 57.5%;
+}
+
+.register_form {
+  width: 90%;
+  height: 100%;
+  position: absolute;
   top: 5%;
-  left: 58%;
-  mix-blend-mode: color;
+  left: 4.5%;
+}
+
+.register_text_form {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #000000;
+  margin-top: 10px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+  height: 35px;
+}
+
+.register_text_form:focus {
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.register_form_font {
+  color: black;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.register_submit {
+  margin-top: 10px;
 }
 
 div.field_with_errors .form-control {

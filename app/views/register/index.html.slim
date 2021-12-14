@@ -1,51 +1,39 @@
-div class="wrapper_register"
-    div class="register_image"
+.wrapper_register
+    .register_image
         = image_tag("register/register_main.jpg", :style => "width: 100%; height: 100vh; max-width:100%; max-height:100%;")
 
-        div class="register_registerform"
+    .register_font_area
+        .register_font Sign Up
 
+    .register_form_area
+        .register_form
+            = form_for(@user, url: register_index_path) do |f|
+                .register_form_font ニックネーム
+                = f.text_field :name, :class => 'register_text_form'
+                - if @user.errors.include?(:name)
+                a style= "color: red;"
+                    = "#{@user.errors.messages[:name].first}"
 
-/ = image_tag('top/top_hinoarasi.png', :class => "top_logo")
-/ nav class="navbar navbar-expand-md bg-warning"
-/   a style="color: white; display: block; margin: auto;"
-/     h2 <strong> 新規登録</strong>
-/ br
-/ = form_for(@user, url: register_index_path) do |f|
-/   div class="container"
-/     span class="badge badge-danger" 必須
-/     label for="ex3" &nbsp;<strong>名前</strong>
-/     = f.text_field :name, :class => 'form-control'
-/     - if @user.errors.include?(:name)
-/       a style= "color: red;"
-/         = "#{@user.errors.messages[:name].first}"
-/   br
-/   div class="container"
-/     span class="badge badge-danger" 必須
-/     label for="ex3" &nbsp;<strong>メールアドレス</strong>
-/     = f.text_field :email, :class => 'form-control'
-/     - if @user.errors.include?(:email)
-/       a style= "color: red;"
-/         = "#{@user.errors.messages[:email].first}"
-/         br
-/         = "#{@user.errors.messages[:email].second}"
-/   br
-/   div class="container"
-/     span class="badge badge-danger" 必須
-/     label for="ex3" &nbsp;<strong>パスワード</strong>
-/     = f.text_field :password, :class => 'form-control', :type => "password"
-/     - if @user.errors.include?(:password)
-/       a style= "color: red;"
-/         = "#{@user.errors.messages[:password].second}"
-/   br
-/   div class="container"
-/     span class="badge badge-danger" 必須
-/     label for="ex3" &nbsp;<strong>パスワード確認</strong>
-/     = f.text_field :password_confirmation, :class => 'form-control', :type => "password"
-/     - if @user.errors.include?(:password_confirmation)
-/       a style= "color: red;"
-/         = "#{@user.errors.messages[:password_confirmation].first}"
-/         br
-/         = "#{@user.errors.messages[:password_confirmation].second}"
-/   br
-/   = submit_tag "登録する", :class => "center-block", :id => "submit"
-/   br
+                .register_form_font メールアドレス
+                = f.text_field :email, :class => 'register_text_form'
+                - if @user.errors.include?(:email)
+                a style= "color: red;"
+                    = "#{@user.errors.messages[:email].first}"
+                    br
+                    = "#{@user.errors.messages[:email].second}"
+
+                .register_form_font パスワード
+                = f.text_field :password, :class => 'register_text_form', :type => "password"
+                - if @user.errors.include?(:password)
+                a style= "color: red;"
+                    = "#{@user.errors.messages[:password].second}"
+
+                .register_form_font パスワード確認
+                = f.text_field :password_confirmation, :class => 'register_text_form', :type => "password"
+                - if @user.errors.include?(:password_confirmation)
+                a style= "color: red;"
+                    = "#{@user.errors.messages[:password_confirmation].first}"
+                    br
+                    = "#{@user.errors.messages[:password_confirmation].second}"
+
+            = submit_tag "登録する", :class => "register_submit", :id => "submit"
