@@ -8,16 +8,16 @@
     .register_form_area
         .register_form
             = form_for(@user, url: register_index_path) do |f|
-                .register_form_font ニックネーム
+                .register_form_font_top ニックネーム
                 = f.text_field :name, :class => 'register_text_form'
                 - if @user.errors.include?(:name)
-                a style= "color: red;"
+                a style= "color: red; font-size: 12px; opacity: 0.7"
                     = "#{@user.errors.messages[:name].first}"
 
                 .register_form_font メールアドレス
                 = f.text_field :email, :class => 'register_text_form'
                 - if @user.errors.include?(:email)
-                a style= "color: red;"
+                a style= "color: red; font-size: 12px; opacity: 0.7"
                     = "#{@user.errors.messages[:email].first}"
                     br
                     = "#{@user.errors.messages[:email].second}"
@@ -25,15 +25,17 @@
                 .register_form_font パスワード
                 = f.text_field :password, :class => 'register_text_form', :type => "password"
                 - if @user.errors.include?(:password)
-                a style= "color: red;"
+                a style= "color: red; font-size: 12px; opacity: 0.7"
                     = "#{@user.errors.messages[:password].second}"
 
                 .register_form_font パスワード確認
                 = f.text_field :password_confirmation, :class => 'register_text_form', :type => "password"
                 - if @user.errors.include?(:password_confirmation)
-                a style= "color: red;"
+                a style= "color: red; font-size: 12px; opacity: 0.7;"
                     = "#{@user.errors.messages[:password_confirmation].first}"
-                    br
                     = "#{@user.errors.messages[:password_confirmation].second}"
 
-            = submit_tag "登録する", :class => "register_submit", :id => "submit"
+                .register_submit_outer
+                    = submit_tag "登録する", :class => "register_submit_inner", :id => "submit"
+                    .or
+                        | or &nbsp; #{link_to "アカウントをお持ちの方はこちら", login_path, :style => "font-size: 14px; text-decoration: underline; color: #bdbdbd "}

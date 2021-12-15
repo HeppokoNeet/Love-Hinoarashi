@@ -34,8 +34,7 @@
 .register_form_area {
   position: absolute;
   width: 39.5%;
-  height: 82%;
-  top: 10.5%;
+  top: 9%;
   left: 57.5%;
 }
 
@@ -50,25 +49,56 @@
 .register_text_form {
   width: 100%;
   background-color: transparent;
-  border: 1px solid #000000;
-  margin-top: 10px;
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
   height: 35px;
 }
 
 .register_text_form:focus {
   outline: 0;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.register_form_font {
+.register_form_font_top {
   color: black;
   margin-top: 30px;
   font-weight: bold;
 }
 
-.register_submit {
-  margin-top: 10px;
+.register_form_font {
+  color: black;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.register_submit_outer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.register_submit_inner {
+  background-color: transparent;
+  padding: 7px 0px;
+  position: absolute;
+  width: 50%;
+  cursor: pointer;
+  border: 1px solid #000000;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+  left: 0%;
+}
+
+.register_submit_inner:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.or {
+  padding-left: 52%;
+  color: #bdbdbd;
+  padding-top: 1%;
+  font-size: 20px;
+  margin-top: 10%;
 }
 
 div.field_with_errors .form-control {
