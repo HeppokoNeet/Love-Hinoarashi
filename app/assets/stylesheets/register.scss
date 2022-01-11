@@ -56,6 +56,10 @@
   height: 35px;
 }
 
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px rgb(224, 224, 224) inset;
+}
+
 .register_text_form:focus {
   outline: 0;
   background-color: rgba(255, 255, 255, 0.1);

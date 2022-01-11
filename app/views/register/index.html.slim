@@ -11,29 +11,26 @@
                 .register_form_font_top ニックネーム
                 = f.text_field :name, :class => 'register_text_form'
                 - if @user.errors.include?(:name)
-                a style= "color: red; font-size: 12px; opacity: 0.7"
-                    = "#{@user.errors.messages[:name].first}"
+                    .register_text_form style= "color: red; font-size: 12px; opacity: 0.7"
+                        = @user.errors.messages[:name].join('、 ')
 
                 .register_form_font メールアドレス
                 = f.text_field :email, :class => 'register_text_form'
                 - if @user.errors.include?(:email)
-                a style= "color: red; font-size: 12px; opacity: 0.7"
-                    = "#{@user.errors.messages[:email].first}"
-                    br
-                    = "#{@user.errors.messages[:email].second}"
+                    .register_text_form style= "color: red; font-size: 12px; opacity: 0.7"
+                        = @user.errors.messages[:email].join('、 ')
 
                 .register_form_font パスワード
                 = f.text_field :password, :class => 'register_text_form', :type => "password"
                 - if @user.errors.include?(:password)
-                a style= "color: red; font-size: 12px; opacity: 0.7"
-                    = "#{@user.errors.messages[:password].second}"
+                    .register_text_form style= "color: red; font-size: 12px; opacity: 0.7"
+                        = @user.errors.messages[:password].join('、 ')
 
                 .register_form_font パスワード確認
                 = f.text_field :password_confirmation, :class => 'register_text_form', :type => "password"
                 - if @user.errors.include?(:password_confirmation)
-                a style= "color: red; font-size: 12px; opacity: 0.7;"
-                    = "#{@user.errors.messages[:password_confirmation].first}"
-                    = "#{@user.errors.messages[:password_confirmation].second}"
+                    .register_text_form style= "color: red; font-size: 12px; opacity: 0.7;"
+                        = @user.errors.messages[:password_confirmation].join('、 ')
 
                 .register_submit_outer
                     = submit_tag "登録する", :class => "register_submit_inner", :id => "submit"
