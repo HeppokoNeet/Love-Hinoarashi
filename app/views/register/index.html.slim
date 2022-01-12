@@ -11,25 +11,25 @@
                 .register_form_font_top ニックネーム
                 = f.text_field :name, :class => 'register_text_form'
                 - if @user.errors.include?(:name)
-                    .register_text_form style= "color: red; font-size: 12px; opacity: 0.7"
+                    a style= "color: red; font-size: 12px; opacity: 0.7; position: absolute; margin-top: 5px;"
                         = @user.errors.messages[:name].join('、 ')
 
                 .register_form_font メールアドレス
                 = f.text_field :email, :class => 'register_text_form'
                 - if @user.errors.include?(:email)
-                    .register_text_form style= "color: red; font-size: 12px; opacity: 0.7"
+                    a style= "color: red; font-size: 12px; opacity: 0.7; position: absolute; margin-top: 5px;"
                         = @user.errors.messages[:email].join('、 ')
 
                 .register_form_font パスワード
                 = f.text_field :password, :class => 'register_text_form', :type => "password"
                 - if @user.errors.include?(:password)
-                    .register_text_form style= "color: red; font-size: 12px; opacity: 0.7"
+                    a style= "color: red; font-size: 12px; opacity: 0.7; position: absolute; margin-top: 5px;"
                         = @user.errors.messages[:password].join('、 ')
 
                 .register_form_font パスワード確認
                 = f.text_field :password_confirmation, :class => 'register_text_form', :type => "password"
                 - if @user.errors.include?(:password_confirmation)
-                    .register_text_form style= "color: red; font-size: 12px; opacity: 0.7;"
+                    a style= "color: red; font-size: 12px; opacity: 0.7; position: absolute; margin-top: 5px;"
                         = @user.errors.messages[:password_confirmation].join('、 ')
 
                 .register_submit_outer
