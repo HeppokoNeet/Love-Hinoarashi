@@ -1,22 +1,28 @@
-- if flash[:error].present?
-    .notifications
-      - flash.each do |key, value|
-        = content_tag(:div, value, class: key)
-= link_to image_tag('top/top_hinoarasi.png', :class => "top_logo"), root_path
-nav class="navbar navbar-expand-md bg-warning"
-  a style="color: white; display: block; margin: auto;"
-    h2 <strong> ログイン</strong>
-br
-= form_for(:session, url: login_path) do |f|
-  div class="container"
-    span class="badge badge-danger" 必須
-    label for="ex3" &nbsp;<strong>メールアドレス</strong>
-    = f.text_field :email, :class => 'form-control'
-  br
-  div class="container"
-    span class="badge badge-danger" 必須
-    label for="ex3" &nbsp;<strong>パスワード</strong>
-    = f.text_field :password, :class => 'form-control', :type => "password"
-  br
-  = submit_tag "ログインする", :class => "center-block", :id => "submit"
-  br
+.wrapper_login
+  .login_image
+    = image_tag("login/pokemon-kingin.jpeg", :style => "width: 100%; height: 100vh; max-width:480px; max-height:100%;")
+
+
+
+/ - if flash[:error].present?
+/     .notifications
+/       - flash.each do |key, value|
+/         = content_tag(:div, value, class: key)
+/ = link_to image_tag('top/top_hinoarasi.png', :class => "top_logo"), root_path
+/ nav class="navbar navbar-expand-md bg-warning"
+/   a style="color: white; display: block; margin: auto;"
+/     h2 <strong> ログイン</strong>
+/ br
+/ = form_for(:session, url: login_path) do |f|
+/   div class="container"
+/     span class="badge badge-danger" 必須
+/     label for="ex3" &nbsp;<strong>メールアドレス</strong>
+/     = f.text_field :email, :class => 'form-control'
+/   br
+/   div class="container"
+/     span class="badge badge-danger" 必須
+/     label for="ex3" &nbsp;<strong>パスワード</strong>
+/     = f.text_field :password, :class => 'form-control', :type => "password"
+/   br
+/   = submit_tag "ログインする", :class => "center-block", :id => "submit"
+/   br
